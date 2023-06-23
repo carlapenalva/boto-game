@@ -1,0 +1,16 @@
+.navBar {
+  width: 100%;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul,
+li {
+  text-decoration-line: none;
+  list-style: none;
+  padding: 30px;
+  /*border: white 1px;*/
+}
