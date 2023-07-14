@@ -1,18 +1,46 @@
-import CartWidget from "../../common/cartWidget/Cartwidget";
+import CartWidget from "../../Common/Cart/CartWidget";
 import "./Navbar.css";
+import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navBar">
-      <ul>
-        <li>Accion</li>
-        <li>Carreras</li>
-        <li>Aventura</li>
-        <li>Shooter</li>
-        <li>Deporte</li>
-      </ul>
-      <CartWidget />
-    </div>
+    <Grid container>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <Link to="/todas">
+          <li>Todos</li>
+        </Link>
+        <Link to="/category/:categoryName">
+          <li>Playstation</li>
+        </Link>
+        <Link to="/category/urbanas">
+          <li>Computadora</li>
+        </Link>
+        <Link to="/category/urbanas">
+          <li>XBOX</li>
+        </Link>
+        <Link to="/category/urbanas">
+          <li className="categorias">
+            Categorias <KeyboardDoubleArrowDownIcon />
+          </li>
+        </Link>
+        <Link to="/cart">
+          <li>
+            <CartWidget />
+          </li>
+        </Link>
+      </Box>
+    </Grid>
   );
 };
 

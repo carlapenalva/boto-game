@@ -1,0 +1,31 @@
+@media (min-width: 150px) {
+  .categoriasHome {
+    display: "flex";
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .categoriasHome,
+  ul {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .home,
+  .li {
+    text-decoration-line: none;
+    list-style: none;
+    padding: 30px;
+  }
+  .li {
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: #131313;
+    font-family: "Audiowide", cursive;
+  }
+}
