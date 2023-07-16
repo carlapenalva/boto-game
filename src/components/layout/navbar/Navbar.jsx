@@ -17,19 +17,22 @@ const Navbar = () => {
           alignItems: "center",
         }}
       >
+        <Link to="/">
+          <li>Inicio</li>
+        </Link>
         <Link to="/todas">
           <li>Todos</li>
         </Link>
-        <Link to="/category/:categoryName">
+        <Link to="/category/playstation">
           <li>Playstation</li>
         </Link>
-        <Link to="/category/urbanas">
+        <Link to="/category/computadora">
           <li>Computadora</li>
         </Link>
-        <Link to="/category/urbanas">
+        <Link to="/category/xbox">
           <li>XBOX</li>
         </Link>
-        <Link to="/category/urbanas">
+        <Link to="/category/categorias">
           <li className="categorias">
             Categorias <KeyboardDoubleArrowDownIcon />
           </li>

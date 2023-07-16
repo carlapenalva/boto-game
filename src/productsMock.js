@@ -14,9 +14,9 @@ export const productos = [
     title: "Fifa",
     price: 4000,
     stock: 2,
-    description: "",
-    category:
+    description:
       "El juego reinventado crea avances en todos los modos en FIFA 22. Vive tus sueños mientras creas y administras tu club personalizado en modo profesional. Volta Football regresa con más estilo en todo el campo y nuevas formas de expresar tu estilo. Construye tu escuadrón de ensueño y compite en FIFA Ultimate Team.",
+    category: "playstation",
     img: "https://res.cloudinary.com/dvuap85l1/image/upload/v1689292349/61Kda_eUmlL._SL1000__db7knq.jpg",
   },
   {
@@ -35,7 +35,7 @@ export const productos = [
     price: 10000,
     stock: 2,
     description:
-      "eague of Legends es un juego de estrategia por equipos en el que dos equipos de cinco campeones se enfrentan para ver quién destruye antes la base del otro. Elige de entre un elenco de 140 campeones para realizar jugadas épicas, asesinar rivales y derribar torretas para alzarte con la victoria.",
+      "League of Legends es un juego de estrategia por equipos en el que dos equipos de cinco campeones se enfrentan para ver quién destruye antes la base del otro. Elige de entre un elenco de 140 campeones para realizar jugadas épicas, asesinar rivales y derribar torretas para alzarte con la victoria.",
     category: "computadora",
     img: "https://res.cloudinary.com/dvuap85l1/image/upload/v1689292660/conoce-todos-los-detalles-acerca-de-lol-y-enterate-como-se-juega-1306879_rnscl6.jpg",
   },
@@ -56,7 +56,7 @@ export const productos = [
     stock: 4,
     description:
       "Diseño de juego de mundo abierto que permite a los jugadores la máxima libertad sobre cómo abordar las misiones y la progresión general del juego Fox Engine ofrece gráficos fotorrealistas, diseño de juego pensado y verdadera calidad de producción de juegos de nueva generación. Conectividad en línea que lleva la experiencia más allá de las consolas a otros dispositivos para aumentar la funcionalidad general y el acceso al juego",
-    category: "XBOX",
+    category: "xbox",
     img: "https://res.cloudinary.com/dvuap85l1/image/upload/v1689292796/metal_gear_solid_5-2723815_pbnjgx.webp",
   },
   {
@@ -66,7 +66,7 @@ export const productos = [
     stock: 4,
     description:
       "Tomb Raider es una aventura de acción aclamada por la crítica que explora los orígenes de Lara Croft y su transformación, de joven inexperta a dura superviviente. Con su instinto como arma, Lara debe luchar para huir de una isla remota y descubrir su oscura historia.",
-    category: "XBOX",
+    category: "xbox",
     img: "https://res.cloudinary.com/dvuap85l1/image/upload/v1689292818/4801884_1_xwbzrq.jpg",
   },
 ];
