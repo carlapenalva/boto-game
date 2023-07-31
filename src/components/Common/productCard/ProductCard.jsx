@@ -16,7 +16,7 @@ const ProductCard = ({ item }) => {
         <Typography gutterBottom variant="h5" component="div">
           {item.title}
         </Typography>
-        <Typography>{item.description}</Typography>
+        <Typography>{item.tipo}</Typography>
       </CardContent>
       <CardActions>
         <Link to={`/itemDetail/${item.id}`}>

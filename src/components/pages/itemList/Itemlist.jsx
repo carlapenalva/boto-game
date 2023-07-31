@@ -3,10 +3,10 @@ const ItemList = ({ items }) => {
   return (
     <div
       style={{
-        display: "flex",
-        justifyContent: "space-around",
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr 1fr",
         paddingTop: "35px",
-        gap: "20px",
+        gap: "40px",
       }}
     >
       {items.map((item) => (

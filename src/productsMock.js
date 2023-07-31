@@ -4,6 +4,7 @@ export const productos = [
     title: "Spiderman",
     price: 5000,
     stock: 5,
+    tipo: "Aventura",
     description:
       "En la última aventura del universo de Spider-Man de Marvel, el adolescente Miles Morales intenta ajustarse a su nuevo hogar mientras que sigue los pasos de su mentor, Peter Parker, para convertirse en el nuevo Spider-Man.Pero cuando un feroz enfrentamiento por el poder amenaza con destruir su hogar, el aspirante a héroe entiende que un gran poder conlleva una gran responsabilidad. Para salvar a la Nueva York de Marvel, Miles debe adoptar el manto de Spider-Man y volverlo propio.",
     category: "playstation",
@@ -11,9 +12,10 @@ export const productos = [
   },
   {
     id: 2,
-    title: "Fifa",
+    title: "Fifa 22",
     price: 4000,
     stock: 2,
+    tipo: "Deporte",
     description:
       "El juego reinventado crea avances en todos los modos en FIFA 22. Vive tus sueños mientras creas y administras tu club personalizado en modo profesional. Volta Football regresa con más estilo en todo el campo y nuevas formas de expresar tu estilo. Construye tu escuadrón de ensueño y compite en FIFA Ultimate Team.",
     category: "playstation",
@@ -23,6 +25,7 @@ export const productos = [
     id: 3,
     title: "CSS-GO",
     price: 15000,
+    tipo: "Shooter",
     stock: 2,
     description:
       "Counter-Strike: Global Ofensive (CS:GO) amplía el juego de disparos en primera persona por equipos del que fue pionero cuando salió en 1999. Dos equipos compiten en múltiples rondas con un modo de juego enfocado en objetivos con la misión de ganar suficientes rondas para llevarse la victoria. CS:GO presenta nuevos mapas, personajes y armas, y ofrece versiones actualizadas de los clásicos mapas de Counter-Strike como Dust, Inferno, Nuke, Train y más. Además, CS:GO introduce nuevos modos de juego, como Carrera de Armamentos, Cazapatos y Compañero, y ofrece matchmaking en línea y grupos de habilidad competitivos.",
@@ -34,6 +37,7 @@ export const productos = [
     title: "League of legends",
     price: 10000,
     stock: 2,
+    tipo: "Aventura",
     description:
       "League of Legends es un juego de estrategia por equipos en el que dos equipos de cinco campeones se enfrentan para ver quién destruye antes la base del otro. Elige de entre un elenco de 140 campeones para realizar jugadas épicas, asesinar rivales y derribar torretas para alzarte con la victoria.",
     category: "computadora",
@@ -42,6 +46,7 @@ export const productos = [
   {
     id: 5,
     title: "Divinity 2",
+    tipo: "Aventura",
     price: 15000,
     stock: 2,
     description:
@@ -54,6 +59,7 @@ export const productos = [
     title: "The phantom pain",
     price: 3200,
     stock: 4,
+    tipo: "Aventura",
     description:
       "Diseño de juego de mundo abierto que permite a los jugadores la máxima libertad sobre cómo abordar las misiones y la progresión general del juego Fox Engine ofrece gráficos fotorrealistas, diseño de juego pensado y verdadera calidad de producción de juegos de nueva generación. Conectividad en línea que lleva la experiencia más allá de las consolas a otros dispositivos para aumentar la funcionalidad general y el acceso al juego",
     category: "xbox",
@@ -62,6 +68,7 @@ export const productos = [
   {
     id: 7,
     title: "Tomb Raider",
+    tipo: "Aventura",
     price: 4500,
     stock: 4,
     description:

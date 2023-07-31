@@ -1,14 +1,67 @@
 import ContadorConteiner from "../../Common/Contador/ContadorConteiner";
+import "./itemDetail.css";
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ShopIcon from "@mui/icons-material/Shop";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import SavingsIcon from "@mui/icons-material/Savings";
+import CreditScoreIcon from "@mui/icons-material/CreditScore";
+
 const ItemDetail = ({ producto, agregarAlCarrito }) => {
   return (
-    <>
-      <h1>{producto.title}</h1>
-      <h1>{producto.price}</h1>
-      <ContadorConteiner
-        agregarAlCarrito={agregarAlCarrito}
-        stock={producto.stock}
-      />
-    </>
+    <div className="productoDetalle">
+      <div className="detalle">
+        <img src={producto.img} alt={producto.title} />
+        <h3>{producto.description}</h3>
+      </div>
+      <div className="accordion">
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Detalle producto</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{producto.description}</Typography>
+          </AccordionDetails>
+        </Accordion>
+      </div>
+
+      <div className="contador">
+        <h1>{producto.title}</h1>
+        <img src={producto.img} alt={producto.title} />
+        <h2>${producto.price}</h2>
+        <h3>Stock disponible: {producto.stock}</h3>
+        <ContadorConteiner
+          agregarAlCarrito={agregarAlCarrito}
+          stock={producto.stock}
+        />
+        <h4>
+          <ShopIcon />
+          Medios de pago
+        </h4>
+        <div>
+          <h5>
+            <CreditCardIcon />
+            Tarjeta de credito
+          </h5>
+          <h5>
+            <CreditScoreIcon />
+            Tarjeta de debito
+          </h5>
+          <h5>
+            <SavingsIcon />
+            Efectivo mediante rapipago
+          </h5>
+        </div>
+      </div>
+    </div>
   );
 };
 
