@@ -3,17 +3,16 @@ import "./Navbar.css";
 import { Box } from "@mui/material";
 import { Grid } from "@mui/material";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <Grid container>
+    <Grid>
       <Box
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
-          justifyContent: "space-around",
+          justifyContent: "space-evenly",
           alignItems: "center",
         }}
       >

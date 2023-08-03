@@ -1,12 +1,16 @@
-import React from "react";
-import { Box } from "@mui/material";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import * as React from "react";
+import Badge from "@mui/material/Badge";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
+/*const { getTotalQuantity } = useContext(CartContext);
+
+let total = getTotalQuantity();*/
 
 const CartWidget = () => {
   return (
-    <Box>
-      <AddShoppingCartIcon />
-    </Box>
+    <Badge badgeContent={4} color="primary" showZero>
+      <ShoppingCartIcon color="main" sx={{ fontSize: 40 }} />
+    </Badge>
   );
 };
 

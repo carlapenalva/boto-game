@@ -1,0 +1,42 @@
+@media (min-width: 100px) {
+  .productos {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1.5px 1.5px 15px 5px rgba(230, 227, 227, 0.2);
+    margin: 4em;
+  }
+  .productos img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+
+  .productos h1 {
+    font-family: "Bruno Ace SC", cursive;
+    margin-bottom: 15px;
+  }
+  .productos h2 {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 900px) {
+  .contenedorProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 35px;
+    /* gap: 40px;*/
+  }
+
+  .productos img {
+    width: 300px;
+    height: 300px;
+  }
+  .productos {
+    width: 300px;
+  }
+}

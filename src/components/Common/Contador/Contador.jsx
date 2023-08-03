@@ -17,6 +17,10 @@ const Contador = ({
         sx={{
           display: "flex",
           flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "10px",
+          marginBottom: "10px",
         }}
       >
         <button onClick={restar}>

@@ -34,7 +34,7 @@ export const productos = [
   },
   {
     id: 4,
-    title: "League of legends",
+    title: "LOL",
     price: 10000,
     stock: 2,
     tipo: "Aventura",
@@ -74,6 +74,28 @@ export const productos = [
     description:
       "Tomb Raider es una aventura de acción aclamada por la crítica que explora los orígenes de Lara Croft y su transformación, de joven inexperta a dura superviviente. Con su instinto como arma, Lara debe luchar para huir de una isla remota y descubrir su oscura historia.",
     category: "xbox",
-    img: "https://res.cloudinary.com/dvuap85l1/image/upload/v1689292818/4801884_1_xwbzrq.jpg",
+    img: "https://res.cloudinary.com/dvuap85l1/image/upload/v1691024863/tomb_raider__2018_-46624151-912ff91a1414f5db3c15902823434270-640-0_gvvtrg.webp",
+  },
+  {
+    id: 8,
+    title: "Tomb Raider",
+    tipo: "Aventura",
+    price: 1500,
+    stock: 15,
+    description:
+      "El juego consiste en conducir a Pac-Man, una bola amarilla que abre y cierra la boca, por un laberinto. Suma puntos cuando come aquello que encuentra a su paso, bolitas y diferentes frutas, pero debe esquivar a cuatro fantasmas.",
+    category: "xbox",
+    img: "https://res.cloudinary.com/dvuap85l1/image/upload/v1689292859/pacman-and-the-ghostly-adventures-201310191883_1_ymy2ze.jpg",
+  },
+  {
+    id: 9,
+    title: "Fifa 22",
+    price: 2800,
+    stock: 7,
+    tipo: "Aventura",
+    description:
+      "La trama sigue al bandicut Crash en su intento por rescatar a su novia Tawna, y frustrar los planes del científico Neo Cortex para dominar el mundo. Si bien el título cuenta principalmente con un sistema de perspectiva en tercera persona, algunos de sus niveles muestran ya sea una vista lateral o hacia adelante.",
+    category: "playstation",
+    img: "https://res.cloudinary.com/dvuap85l1/image/upload/v1691025135/productos_300x400_1622822420-crash-bandicoot-4-its-about-time-ps4_onkczt.jpg",
   },
 ];
