@@ -78,7 +78,7 @@ export const productos = [
   },
   {
     id: 8,
-    title: "Tomb Raider",
+    title: "Pac-man",
     tipo: "Aventura",
     price: 1500,
     stock: 15,
@@ -89,7 +89,7 @@ export const productos = [
   },
   {
     id: 9,
-    title: "Fifa 22",
+    title: "Crash",
     price: 2800,
     stock: 7,
     tipo: "Aventura",

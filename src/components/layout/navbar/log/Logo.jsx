@@ -3,16 +3,18 @@ import "./Logo.css";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
-/*Aca iria el logo + la busqueda. Antes de la navBar.*/
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
     <div className="contenedorLogo">
-      <img
-        style={{ width: "150px", height: "150px" }}
-        src="https://res.cloudinary.com/dvuap85l1/image/upload/v1688405220/logoChico_ogpt0a.png"
-        alt="logo"
-      />
+      <Link to="/">
+        <img
+          style={{ width: "150px", height: "150px" }}
+          src="https://res.cloudinary.com/dvuap85l1/image/upload/v1688405220/logoChico_ogpt0a.png"
+          alt="logo"
+        />
+      </Link>
       <TextField
         sx={{ backgroundColor: "white", width: "400px" }}
         id="filled-search"

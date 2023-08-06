@@ -1,4 +1,10 @@
 @media (min-width: 100px) {
+  .contenedorProductos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .productos {
     width: 200px;
     display: flex;
