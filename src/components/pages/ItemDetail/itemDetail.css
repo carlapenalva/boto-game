@@ -1,0 +1,88 @@
+@media (min-width: 100px) {
+  .productoDetalle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .detalle {
+    width: 200px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .detalle img {
+    width: 200px;
+    height: 200px;
+  }
+  .accordion {
+    width: 200px;
+    color: blue;
+  }
+
+  .detalle h3 {
+    display: none;
+  }
+  .contador {
+    margin-top: 40px;
+    width: 200px;
+    height: 560px;
+    border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .contador img {
+    width: 150px;
+  }
+  .contador h1 {
+    font-family: "Bruno Ace SC", cursive;
+  }
+
+  @media (min-width: 450px) {
+    .detalle {
+      width: 350px;
+    }
+    .detalle img {
+      width: 350px;
+      height: 350px;
+    }
+    .accordion {
+      width: 350px;
+    }
+    .contador {
+      width: 350px;
+      height: 560px;
+      border: solid 1px white;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .accordion {
+      display: none;
+    }
+    .productoDetalle {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+    .detalle {
+      width: 500px;
+      margin-left: 5em;
+    }
+    .detalle img {
+      width: 500px;
+      height: 500px;
+    }
+    .detalle h3 {
+      display: block;
+      font-family: "Roboto", sans-serif;
+      box-shadow: 1.5px 1.5px 15px 5px rgba(230, 227, 227, 0.2);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+  }
+}

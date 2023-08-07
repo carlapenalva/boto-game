@@ -1,14 +1,15 @@
-import Home from "./components/pages/home/Home";
-import Navbar from "./components/layout/navbar/Navbar";
-import ItemlistConteiner from "./components/pages/itemList/ItemlistConteiner";
+import { BrowserRouter } from "react-router-dom";
+import React from "react";
+import CartContextComponent from "./context/CartContext";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Home />
-      <ItemlistConteiner />
-    </>
+    <BrowserRouter>
+      <CartContextComponent>
+        <AppRouter />
+      </CartContextComponent>
+    </BrowserRouter>
   );
 }
 

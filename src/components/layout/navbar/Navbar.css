@@ -1,16 +1,16 @@
-.navBar {
-  width: 100%;
-}
-ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+@media (min-width: 100px) {
+  .categorias {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  li {
+    text-decoration-line: none;
+    list-style: none;
+    color: white;
+    padding: 40px;
+  }
 }
 
-ul,
-li {
-  text-decoration-line: none;
-  list-style: none;
-  padding: 30px;
-  /*border: white 1px;*/
+@media (min-width: 900px) {
 }
