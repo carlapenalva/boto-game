@@ -1,6 +1,8 @@
 import _default from "@mui/material/styles/identifier";
 import ItemDetail from "./ItemDetail";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
+/*import { toast, ToastContainer } from "react-toastify";*/
 import { productos } from "../../../productsMock";
 import { useParams } from "react-router-dom";
 
@@ -8,6 +10,8 @@ const ItemDetailConteiner = () => {
   const [producto, setProducto] = useState({});
 
   let { id } = useParams();
+  const { addToCart, getQuantityById } = useContext(CartContext);
+  let cantidadEnCarrito = getQuantityById(id);
 
   useEffect(() => {
     let promesa = new Promise((resolve, reject) => {
@@ -19,9 +23,10 @@ const ItemDetailConteiner = () => {
   }, [id]);
 
   const agregarAlCarrito = (cantidad) => {
-    let productoIntegrado = { ...producto, quantity: cantidad };
-    console.log(productoIntegrado);
+    let data = { ...producto, quantity: cantidad };
+    addToCart(data);
   };
+
   return <ItemDetail producto={producto} agregarAlCarrito={agregarAlCarrito} />;
 };
 
