@@ -16,7 +16,7 @@ const Navbar = () => {
           alignItems: "center",
         }}
       >
-        <Link to="/">
+        <Link to="/" sx={{ textDecorationLine: "none" }}>
           <li>Inicio</li>
         </Link>
         <Link to="/todas">
