@@ -1,50 +1,92 @@
-import { useState } from "react";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import "./checkOut.css";
+import { useContext, useState } from "react";
+import { CartContext } from "../../../context/CartContext";
+import { db } from "../../../firebaseConfig";
+import {
+  addDoc,
+  collection,
+  serverTimestamp,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
+import { Button } from "@mui/material";
 
-const CheckoutContainer = () => {
-  const navigate = useNavigate();
+const CheckOut = () => {
+  const { cart, getTotalPrice } = useContext(CartContext);
+
+  const [orderId, setOrderId] = useState("");
 
   const [userData, setUserData] = useState({
     name: "",
-    lastName: "",
+    phone: "",
+    email: "",
   });
+  let total = getTotalPrice();
 
-  const funcionDelFormulario = (evento) => {
+  const handleSubmit = (evento) => {
     evento.preventDefault();
 
-    // AXIOS.POST("dasdasdas", userData)
-    console.log(userData);
+    let order = {
+      buyer: userData,
+      items: cart,
+      total,
+      date: serverTimestamp(),
+    };
 
-    // ACA QUIERO VOLVER AL HOME
-    navigate("/");
+    let ordersCollections = collection(db, "orders");
+    addDoc(ordersCollections, order).then((res) => setOrderId(res.id));
+
+    cart.forEach((elemento) => {
+      updateDoc(doc(db, "products", elemento.id), {
+        stock: elemento.stock - elemento.quantity,
+      });
+    });
   };
 
-  const funcionDeLosInput = (evento) => {
+  const handleChange = (evento) => {
     setUserData({ ...userData, [evento.target.name]: evento.target.value });
   };
 
   return (
-    <div>
-      <h1>Checkout</h1>
-      <form onSubmit={funcionDelFormulario}>
-        <input
-          type="text"
-          placeholder="ingrese su nombre"
-          name="name"
-          onChange={funcionDeLosInput}
-        />
-        <input
-          type="text"
-          placeholder="ingrese su apellido"
-          name="lastName"
-          onChange={funcionDeLosInput}
-        />
-        <button type="submit">Enviar</button>
-        <button type="button">Cancelar</button>
-      </form>
+    <div className="formulario">
+      <h1>Terminar la compra</h1>
+
+      {!orderId ? (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Ingrese su nombre"
+            name="name"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            placeholder="Ingrese su telefono"
+            name="phone"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            placeholder="Ingrese su email"
+            name="email"
+            onChange={handleChange}
+          />
+          <Button
+            variant="contained"
+            type="submit"
+            sx={{ marginBottom: "20px", width: "150px" }}
+          >
+            Comprar
+          </Button>
+        </form>
+      ) : (
+        <div className="compraFinalizada">
+          <img src="https://res.cloudinary.com/dvuap85l1/image/upload/v1688405220/logoChico_ogpt0a.png" />
+          <h3>El codigo de su compra es: {orderId} </h3>
+        </div>
+      )}
     </div>
   );
 };
-
-export default CheckoutContainer;
+export default CheckOut;

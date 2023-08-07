@@ -11,10 +11,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /*gap: 3em;*/
     padding-top: 20px;
     padding-bottom: 20px;
     box-shadow: 1.5px 1.5px 15px 5px rgba(230, 227, 227, 0.2);
+    font-family: "Bruno Ace SC", cursive;
   }
   .carritoUno img {
     width: 150px;

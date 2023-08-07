@@ -18,7 +18,7 @@ const Footer = () => {
         }}
       >
         <CopyrightIcon size="small" />
-        <h4>Todos los derechos reservados</h4>
+        <h4>Todos los derechos reservados - Carla Peñalva</h4>
       </Box>
       <Box
         sx={{
@@ -26,12 +26,17 @@ const Footer = () => {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          padding: "10px",
         }}
       >
-        <InstagramIcon />
-        <FacebookIcon />
-        <WhatsAppIcon />
+        <a href="https://www.instagram.com/">
+          <InstagramIcon sx={{ padding: "5px" }} />
+        </a>
+        <a href="https://es-la.facebook.com/">
+          <FacebookIcon sx={{ padding: "5px" }} />
+        </a>
+        <a href="https://www.whatsapp.com/">
+          <WhatsAppIcon sx={{ padding: "5px" }} />
+        </a>
       </Box>
     </div>
   );

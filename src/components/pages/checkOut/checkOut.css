@@ -1,0 +1,57 @@
+@media (min-width: 100px) {
+  form {
+    box-shadow: 1.5px 1.5px 15px 5px rgba(230, 227, 227, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+  }
+  .formulario h1 {
+    text-align: center;
+    font-family: "Press Start 2P", cursive;
+  }
+  input {
+    margin: 2em;
+    width: 150px;
+    height: 40px;
+  }
+
+  .compraFinalizada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .compraFinalizada img {
+    width: 200px;
+    height: 200px;
+    margin: 2em;
+  }
+  .compraFinalizada h3 {
+    font-family: "Press Start 2P", cursive;
+    margin: 2em;
+  }
+}
+@media (min-width: 600px) {
+  form {
+    box-shadow: 1.5px 1.5px 15px 5px rgba(230, 227, 227, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5em;
+  }
+  input {
+    width: 250px;
+  }
+}
+
+@media (min-width: 900px) {
+  input {
+    width: 350px;
+  }
+  .boton {
+    width: 350px;
+  }
+}

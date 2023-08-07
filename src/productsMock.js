@@ -48,7 +48,7 @@ export const productos = [
     title: "Divinity 2",
     tipo: "Aventura",
     price: 15000,
-    stock: 2,
+    stock: 20,
     description:
       "Divinity: Original Sin 2 - Definitive Edition es un juego de rol de mundo abierto de la nueva generación, cuyo elemento principal es la narrativa, desarrollado en un mundo en expansión con una historia que reacciona a quién eres y a lo que has hecho.",
     category: "computadora",

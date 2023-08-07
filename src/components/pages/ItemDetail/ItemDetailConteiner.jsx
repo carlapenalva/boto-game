@@ -1,10 +1,11 @@
-import _default from "@mui/material/styles/identifier";
+//import _default from "@mui/material/styles/identifier";
 import ItemDetail from "./ItemDetail";
 import React, { useState, useEffect, useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 /*import { toast, ToastContainer } from "react-toastify";*/
-import { productos } from "../../../productsMock";
 import { useParams } from "react-router-dom";
+import { db } from "../../../firebaseConfig";
+import { getDoc, collection, doc } from "firebase/firestore";
 
 const ItemDetailConteiner = () => {
   const [producto, setProducto] = useState({});
@@ -14,12 +15,9 @@ const ItemDetailConteiner = () => {
   let cantidadEnCarrito = getQuantityById(id);
 
   useEffect(() => {
-    let promesa = new Promise((resolve, reject) => {
-      let productoSel = productos.find((producto) => producto.id === +id);
-      resolve(productoSel);
-    });
-
-    promesa.then((res) => setProducto(res)).catch((err) => console.log(err));
+    let refCollection = collection(db, "Items");
+    let refDoc = doc(refCollection, id);
+    getDoc(refDoc).then((res) => setProducto({ ...res.data(), id: res.id }));
   }, [id]);
 
   const agregarAlCarrito = (cantidad) => {
@@ -27,7 +25,13 @@ const ItemDetailConteiner = () => {
     addToCart(data);
   };
 
-  return <ItemDetail producto={producto} agregarAlCarrito={agregarAlCarrito} />;
+  return (
+    <ItemDetail
+      producto={producto}
+      agregarAlCarrito={agregarAlCarrito}
+      cantidadEnCarrito={cantidadEnCarrito}
+    />
+  );
 };
 
 export default ItemDetailConteiner;

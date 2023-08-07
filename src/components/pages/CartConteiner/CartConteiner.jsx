@@ -36,7 +36,7 @@ const CartContainer = () => {
               <div className="carritoUno" key={elemento.id}>
                 <img src={elemento.img} />
                 <h3>{elemento.title}</h3>
-                <h3>{elemento.price}</h3>
+                <h3>${elemento.price}</h3>
                 <h4>Cantidad: {elemento.quantity}</h4>
                 <Button
                   variant="contained"
