@@ -6,11 +6,37 @@
     align-items: center;
     gap: 10;
   }
+  .navMobile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1em 2em 2em 2em;
+  }
+  .imagenLogo {
+    width: 100px;
+    height: 100px;
+  }
+  .buscador {
+    background-color: rgba(39, 39, 39, 0.219);
+    width: 200px;
+  }
 }
 @media (min-width: 900px) {
+  .navMobile {
+    margin: 0;
+  }
+  .imagenLogo {
+    width: 150px;
+    height: 150px;
+  }
   .contenedorLogo {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 1em 2em 0 2em;
+  }
+  .buscador {
+    width: 300px;
   }
   .lugar {
     display: flex;

@@ -1,36 +1,64 @@
 import React from "react";
 import "./Logo.css";
 import TextField from "@mui/material/TextField";
-import SearchIcon from "@mui/icons-material/Search";
+import { Box, Button } from "@mui/material";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Logo = () => {
   return (
-    <div className="contenedorLogo">
-      <Link to="/">
-        <img
-          style={{ width: "150px", height: "150px" }}
-          src="https://res.cloudinary.com/dvuap85l1/image/upload/v1688405220/logoChico_ogpt0a.png"
-          alt="logo"
-        />
-      </Link>
+    <Box className="contenedorLogo">
+      <Box className="navMobile">
+        <Link to="/">
+          <img
+            className="imagenLogo"
+            src="https://res.cloudinary.com/dvuap85l1/image/upload/v1688405220/logoChico_ogpt0a.png"
+            alt="logo"
+          />
+        </Link>
+        <Box
+          sx={{
+            display: { xs: "flex", md: "none" },
+          }}
+          className="menuHamb"
+        >
+          <Button>
+            <SearchIcon sx={{ fontSize: "2em" }}></SearchIcon>
+          </Button>
+          <Button>
+            <MenuIcon sx={{ fontSize: "3em" }}></MenuIcon>
+          </Button>
+        </Box>
+      </Box>
       <TextField
-        sx={{ backgroundColor: "white", width: "400px" }}
+        className="buscador"
+        sx={{
+          display: { xs: "none", md: "flex" },
+        }}
         id="filled-search"
         label="Buscador"
         type="search"
         variant="filled"
         size="small"
         InputProps={{
-          style: { color: "#0882c9" },
+          style: { color: "white" },
         }}
-      />
-      <div className="lugar">
+        InputLabelProps={{
+          style: { color: "white" },
+        }}
+      ></TextField>
+      <Box
+        className="lugar"
+        sx={{
+          display: { xs: "none", md: "flex" },
+        }}
+      >
         <SportsEsportsIcon />
         <h2>Tu lugar</h2>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 
