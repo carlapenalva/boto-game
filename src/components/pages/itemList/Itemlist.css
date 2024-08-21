@@ -20,11 +20,11 @@
     margin-bottom: 15px;
   }
 
-  .productos h1 {
+  .productos h2 {
     font-family: "Bruno Ace SC", cursive;
     margin-bottom: 15px;
   }
-  .productos h2 {
+  .productos h3 {
     font-family: "Roboto", sans-serif;
     margin-bottom: 15px;
   }
@@ -33,9 +33,8 @@
 @media (min-width: 900px) {
   .contenedorProductos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding-top: 35px;
-    /* gap: 40px;*/
   }
 
   .productos img {
@@ -44,5 +43,15 @@
   }
   .productos {
     width: 300px;
+    margin: 0 auto;
+    margin-bottom: 4em;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedorProductos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .productos {
+    margin: 4em;
   }
 }

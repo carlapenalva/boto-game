@@ -19,9 +19,14 @@ const ItemDetail = ({ producto, agregarAlCarrito }) => {
         <h3>{producto.description}</h3>
       </div>
       <div className="accordion">
-        <Accordion>
+        <Accordion
+          sx={{
+            backgroundColor: "rgba(39, 39, 39, 0.219)",
+            color: "white",
+          }}
+        >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >

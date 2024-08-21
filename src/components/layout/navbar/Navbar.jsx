@@ -10,8 +10,8 @@ const Navbar = () => {
     <Grid>
       <Box
         sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" },
+          display: { xs: "none", md: "flex" },
+          flexDirection: "row",
           justifyContent: "space-evenly",
           alignItems: "center",
         }}
@@ -26,15 +26,10 @@ const Navbar = () => {
           <li>Playstation</li>
         </Link>
         <Link to="/category/computadora">
-          <li>Computadora</li>
+          <li>PC</li>
         </Link>
         <Link to="/category/xbox">
           <li>XBOX</li>
-        </Link>
-        <Link to="/category/categorias">
-          <li className="categorias">
-            Categorias <KeyboardDoubleArrowDownIcon />
-          </li>
         </Link>
         <Link to="/cart">
           <li>

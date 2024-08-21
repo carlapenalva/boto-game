@@ -12,8 +12,8 @@ const ItemList = ({ items }) => {
           <Link to={`/itemDetail/${item.id}`}>
             <Button>Ver detalle</Button>
           </Link>
-          <h1>{item.title} </h1>
-          <h2>{item.tipo}</h2>
+          <h2>{item.title} </h2>
+          <h3>{item.tipo}</h3>
         </div>
         /*<ProductCard key={item.id} item={item} />*/
       ))}
