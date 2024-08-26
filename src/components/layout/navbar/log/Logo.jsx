@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Logo.css";
+import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { Box, Button } from "@mui/material";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
@@ -8,6 +9,20 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 
 const Logo = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearchTerm(value);
+
+    if (value.trim() === "") {
+      navigate("/todas"); // Redirige a la página de todos los productos
+    } else {
+      navigate(`/search?q=${value}`); // Redirige a la página de búsqueda
+    }
+  };
+
   return (
     <Box className="contenedorLogo">
       <Box className="navMobile">
@@ -33,6 +48,8 @@ const Logo = () => {
         </Box>
       </Box>
       <TextField
+        onInput={handleSearch}
+        value={searchTerm}
         className="buscador"
         sx={{
           display: { xs: "none", md: "flex" },
