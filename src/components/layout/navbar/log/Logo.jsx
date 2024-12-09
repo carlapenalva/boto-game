@@ -3,6 +3,7 @@ import "./Logo.css";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { Box, Button } from "@mui/material";
+import CartWidget from "../../../Common/Cart/CartWidget";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -40,40 +41,59 @@ const Logo = () => {
           className="menuHamb"
         >
           <Button>
-            <SearchIcon sx={{ fontSize: "2em" }}></SearchIcon>
+            <SearchIcon sx={{ fontSize: "2em", color: "white" }}></SearchIcon>
           </Button>
           <Button>
-            <MenuIcon sx={{ fontSize: "3em" }}></MenuIcon>
+            <MenuIcon sx={{ fontSize: "3em", color: "white" }}></MenuIcon>
           </Button>
+          <Link to="/cart">
+            <li>
+              <CartWidget />
+            </li>
+          </Link>
         </Box>
       </Box>
-      <TextField
-        onInput={handleSearch}
-        value={searchTerm}
-        className="buscador"
+      <Box
         sx={{
           display: { xs: "none", md: "flex" },
+          flexDirection: "row",
+          alignItems: "center",
+          margin: "1px",
         }}
-        id="filled-search"
-        label="Buscador"
-        type="search"
-        variant="filled"
-        size="small"
-        InputProps={{
-          style: { color: "white" },
-        }}
-        InputLabelProps={{
-          style: { color: "white" },
-        }}
-      ></TextField>
+        className="boxBuscador"
+      >
+        <SportsEsportsIcon />
+        <TextField
+          onInput={handleSearch}
+          value={searchTerm}
+          className="buscador"
+          sx={{
+            margin: "5px",
+          }}
+          id="filled-search"
+          label="Buscador"
+          type="search"
+          variant="filled"
+          size="small"
+          InputProps={{
+            style: { color: "white" },
+          }}
+          InputLabelProps={{
+            style: { color: "white" },
+          }}
+        ></TextField>
+      </Box>
       <Box
         className="lugar"
         sx={{
           display: { xs: "none", md: "flex" },
         }}
       >
-        <SportsEsportsIcon />
-        <h2>Tu lugar</h2>
+        <Link to="/cart">
+          <li>
+            <CartWidget />
+          </li>
+        </Link>
       </Box>
     </Box>
   );
