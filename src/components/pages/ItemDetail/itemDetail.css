@@ -40,6 +40,7 @@
   }
   .contador h1 {
     font-family: "Bruno Ace SC", cursive;
+    font-size: x-large;
   }
 
   @media (min-width: 450px) {
@@ -68,6 +69,14 @@
     .accordion {
       width: 450px;
     }
+    .contador img {
+      width: 180px;
+      height: 200px;
+    }
+    .contador h1 {
+      font-family: "Bruno Ace SC", cursive;
+      font-size: xx-large;
+    }
   }
 }
 @media (min-width: 1100px) {
@@ -89,9 +98,9 @@
   .detalle h3 {
     display: block;
     font-family: "Roboto", sans-serif;
-    box-shadow: 1.5px 1.5px 15px 5px rgba(230, 227, 227, 0.2);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-size: small;
+    /* box-shadow: 1.5px 1.5px 15px 5px rgba(230, 227, 227, 0.2);*/
+    padding: 20px;
     text-align: center;
   }
 }

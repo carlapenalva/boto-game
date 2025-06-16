@@ -15,6 +15,7 @@ const Footer = () => {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
+          marginTop: "1.5em",
         }}
       >
         <CopyrightIcon size="small" />
