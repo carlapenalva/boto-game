@@ -23,7 +23,16 @@ const Logo = () => {
       navigate(`/search?q=${value}`); // Redirige a la página de búsqueda
     }
   };
-
+  const [isOpen, setIsOpen] = useState(false);
+  const abrirMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
+    // Si se abre el buscador, aseguramos que el menú hamburguesa esté cerrado
+    if (isOpen) setIsOpen(false);
+  };
   return (
     <Box className="contenedorLogo">
       <Box className="navMobile">
@@ -40,17 +49,79 @@ const Logo = () => {
           }}
           className="menuHamb"
         >
-          <Button>
-            <SearchIcon sx={{ fontSize: "2em", color: "white" }}></SearchIcon>
-          </Button>
-          <Button>
-            <MenuIcon sx={{ fontSize: "3em", color: "white" }}></MenuIcon>
-          </Button>
-          <Link to="/cart">
-            <li>
-              <CartWidget />
-            </li>
-          </Link>
+          <Box>
+            <Button onClick={toggleSearch}>
+              <SearchIcon
+                sx={{ fontSize: "2em", color: "white", marginTop: "1.3em" }}
+              ></SearchIcon>
+            </Button>
+            <Box
+              className={`mobile-search-input ${isSearchOpen ? "active" : ""}`}
+              sx={{
+                width: "100%",
+                justifyContent: "center",
+                padding: "10px 0", // Padding para el input
+                position: "absolute", // Para que se despliegue debajo del header
+                top: "100px", // Ajusta esta altura según la altura total de tu navMobile cuando está colapsado
+                left: 0,
+                zIndex: 999, // Un z-index menor que el menú hamburguesa, pero mayor que el contenido
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
+              <SportsEsportsIcon sx={{ color: "white" }} />
+              <TextField
+                onInput={handleSearch}
+                value={searchTerm}
+                className="buscador-mobile" // Nueva clase para el input móvil
+                sx={{
+                  margin: "5px",
+                }}
+                id="filled-search-mobile"
+                label="Buscar juego..."
+                type="search"
+                variant="filled"
+                size="small"
+                InputProps={{
+                  style: { color: "white" },
+                }}
+                InputLabelProps={{
+                  style: { color: "white" },
+                }}
+              />
+            </Box>
+          </Box>
+          <Box>
+            <Button onClick={abrirMenu}>
+              <MenuIcon
+                sx={{ fontSize: "3em", color: "white", marginTop: "0.7em" }}
+              ></MenuIcon>
+            </Button>
+            <ul className={`nav-links ${isOpen ? "active" : ""}`}>
+              <Link to="/" sx={{ textDecorationLine: "none" }}>
+                <li>Inicio</li>
+              </Link>
+              <Link to="/todas" onClick={abrirMenu}>
+                <li>Todos</li>
+              </Link>
+              <Link to="/category/playstation" onClick={abrirMenu}>
+                <li>Playstation</li>
+              </Link>
+              <Link to="/category/computadora" onClick={abrirMenu}>
+                <li>PC</li>
+              </Link>
+              <Link to="/category/xbox" onClick={abrirMenu}>
+                <li>XBOX</li>
+              </Link>
+            </ul>
+          </Box>
+          <Box>
+            <Link to="/cart">
+              <li>
+                <CartWidget />
+              </li>
+            </Link>
+          </Box>
         </Box>
       </Box>
       <Box

@@ -23,12 +23,28 @@ const Contador = ({
           marginBottom: "10px",
         }}
       >
-        <button onClick={restar}>
-          <RemoveCircleOutlineIcon />
+        <button
+          onClick={restar}
+          style={{
+            backgroundColor: "transparent",
+            color: "white",
+            fontSize: "30px",
+            border: "none",
+          }}
+        >
+          -
         </button>
         <h4>{contador}</h4>
-        <button onClick={sumar}>
-          <AddCircleOutlineIcon />
+        <button
+          onClick={sumar}
+          style={{
+            backgroundColor: "transparent",
+            color: "white",
+            fontSize: "20px",
+            border: "none",
+          }}
+        >
+          +
         </button>
       </Box>
       <Button variant="outlined" onClick={() => agregarAlCarrito(contador)}>

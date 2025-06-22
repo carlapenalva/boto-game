@@ -6,10 +6,6 @@ import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrow
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  /*const [isOpen, setIsOpen] = useState(false);
-  const abrirMenu = () => {
-    setIsOpen(!isOpen);
-  };*/
   return (
     <Grid>
       <Box
