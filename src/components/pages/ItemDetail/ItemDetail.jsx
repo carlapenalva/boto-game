@@ -47,10 +47,7 @@ const ItemDetail = ({ producto, agregarAlCarrito }) => {
           agregarAlCarrito={agregarAlCarrito}
           stock={producto.stock}
         />
-        <h4>
-          <ShopIcon />
-          Medios de pago
-        </h4>
+        {/*<h4>Medios de pago:</h4>
         <div>
           <h5>
             <CreditCardIcon />
@@ -64,7 +61,7 @@ const ItemDetail = ({ producto, agregarAlCarrito }) => {
             <SavingsIcon />
             Efectivo mediante rapipago
           </h5>
-        </div>
+        </div>*/}
       </div>
     </div>
   );

@@ -32,14 +32,8 @@
   }
 }
 @media (min-width: 900px) {
-  .carrito {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 6em;
-  }
   .carritoUno {
     margin: 3em;
-    width: 100%;
     height: 130px;
     display: flex;
     flex-direction: row;
@@ -49,5 +43,17 @@
     padding-bottom: 20px;
     box-shadow: 1.5px 1.5px 15px 5px rgba(230, 227, 227, 0.2);
     font-family: "Bruno Ace SC", cursive;
+  }
+}
+@media (min-width: 1132px) {
+  .carrito {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 6em;
+  }
+
+  .carritoUno {
+    margin: 3em;
+    width: 100%;
   }
 }
