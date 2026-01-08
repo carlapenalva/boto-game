@@ -1,13 +1,10 @@
-@media (min-width: 150px) {
+@media (max-width: 919px) {
   .categoriasHome {
     display: none;
   }
   .inicio {
     box-shadow: 1.5px 1.5px 15px 5px rgba(230, 227, 227, 0.2);
   }
-  /*.inicio img {
-    width: 100%;
-  }*/
   .inicio {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -44,7 +41,7 @@
     height: 400px;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 920px) {
   .categoriasHome,
   ul {
     display: block;
@@ -60,8 +57,7 @@
     text-decoration-line: none;
     list-style: none;
   }
-  .li,
-  img {
+  .li-img {
     width: 100px;
     height: 100px;
   }
